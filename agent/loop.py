@@ -24,8 +24,8 @@ os.makedirs(os.path.dirname(log_path), exist_ok=True)
 
 
 class AgentLoop:
-    def __init__(self, provider: str | None = None):
-        self.client = get_llm_client(provider)
+    def __init__(self, provider: str | None = None, api_key: str | None = None):
+        self.client = get_llm_client(provider, api_key)
         self.max_turns = int(os.getenv("MAX_TOOL_TURNS", "6"))
         self.system_prompt = SYSTEM_PROMPT
 

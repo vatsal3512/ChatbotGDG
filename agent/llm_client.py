@@ -362,13 +362,14 @@ class GeminiClient(LLMClient):
 # Factory
 # ─────────────────────────────────────────────────────────────────────────────
 
-def get_llm_client(provider: str | None = None) -> LLMClient:
+def get_llm_client(provider: str | None = None, api_key: str | None = None) -> LLMClient:
     """
     Factory that reads LLM_PROVIDER (env) and returns the appropriate client.
     Fails immediately with a clear message if the required API key is missing.
 
     Args:
         provider: Override the env var. Values: "groq" | "gemini".
+        api_key: Override the env var api key.
 
     Returns:
         Configured LLMClient subclass.
@@ -376,24 +377,24 @@ def get_llm_client(provider: str | None = None) -> LLMClient:
     provider = (provider or os.getenv("LLM_PROVIDER", "groq")).lower().strip()
 
     if provider == "groq":
-        api_key = os.getenv("GROQ_API_KEY", "")
-        if not api_key:
+        key = api_key or os.getenv("GROQ_API_KEY", "")
+        if not key:
             raise EnvironmentError(
                 "LLM_PROVIDER is 'groq' but GROQ_API_KEY is not set. "
                 "Add it to your .env file or environment variables."
             )
         model = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
-        return GroqClient(api_key=api_key, model=model)
+        return GroqClient(api_key=key, model=model)
 
     elif provider == "gemini":
-        api_key = os.getenv("GEMINI_API_KEY", "")
-        if not api_key:
+        key = api_key or os.getenv("GEMINI_API_KEY", "")
+        if not key:
             raise EnvironmentError(
                 "LLM_PROVIDER is 'gemini' but GEMINI_API_KEY is not set. "
                 "Add it to your .env file or environment variables."
             )
         model = os.getenv("GEMINI_MODEL", "gemini-3.6-flash")
-        return GeminiClient(api_key=api_key, model=model)
+        return GeminiClient(api_key=key, model=model)
 
     else:
         raise ValueError(

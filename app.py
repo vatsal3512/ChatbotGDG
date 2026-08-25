@@ -193,9 +193,9 @@ st.markdown("""
 
 # ── Lazy-load agent loop ─────────────────────────────────────────────────────
 @st.cache_resource(show_spinner=False)
-def get_agent():
+def get_agent(provider: str, api_key: str):
     from agent.loop import AgentLoop
-    return AgentLoop()
+    return AgentLoop(provider=provider, api_key=api_key)
 
 
 # ── Helper: rating → CSS class ───────────────────────────────────────────────
@@ -230,15 +230,23 @@ with st.sidebar:
     st.markdown('<div class="cf-subtitle">Codeforces RAG Chatbot · Powered by Gemini</div>', unsafe_allow_html=True)
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
 
-    # Provider status
+    # Provider status & Key Input
     provider = os.getenv("LLM_PROVIDER", "gemini")
-    groq_ok = bool(os.getenv("GROQ_API_KEY"))
-    gemini_ok = bool(os.getenv("GEMINI_API_KEY"))
-    active_ok = (provider == "gemini" and gemini_ok) or (provider == "groq" and groq_ok)
+    env_key = os.getenv("GEMINI_API_KEY") if provider == "gemini" else os.getenv("GROQ_API_KEY")
+    
+    user_api_key = st.text_input(
+        f"{provider.title()} API Key", 
+        value=env_key or "", 
+        type="password", 
+        placeholder=f"Enter your {provider.title()} API key",
+        help="Your key is not stored and is only used for this session."
+    )
+    
+    active_ok = bool(user_api_key.strip())
     if active_ok:
         st.markdown(f'<div class="status-ok">✓ {provider.title()} connected</div>', unsafe_allow_html=True)
     else:
-        st.markdown(f'<div class="status-err">✗ {provider.title()} key missing — check .env</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="status-err">✗ {provider.title()} key missing</div>', unsafe_allow_html=True)
 
     st.markdown("**⚙ Settings**")
     hint_level = st.select_slider(
@@ -304,9 +312,9 @@ st.markdown(
 # Initialise session state
 if "messages" not in st.session_state:
     st.session_state["messages"] = []
-if "agent" not in st.session_state:
+if active_ok and "agent" not in st.session_state:
     with st.spinner("Warming up the assistant…"):
-        st.session_state["agent"] = get_agent()
+        st.session_state["agent"] = get_agent(provider, user_api_key)
 
 # Eval metrics banner
 eval_path = "eval/results"
@@ -378,9 +386,12 @@ if "pending_prompt" in st.session_state:
         augmented = prompt
 
     with st.chat_message("assistant", avatar="⚡"):
+        if not active_ok:
+            st.error("Please provide an API key in the sidebar.")
+            st.stop()
         with st.spinner("Thinking…"):
             try:
-                agent = st.session_state["agent"]
+                agent = get_agent(provider, user_api_key)
                 history = [m for m in st.session_state["messages"][:-1] if m["role"] in ("user", "assistant")]
                 response = agent.chat(augmented, history=history)
             except Exception as e:
@@ -391,7 +402,8 @@ if "pending_prompt" in st.session_state:
     st.rerun()
 
 # Chat input
-if user_input := st.chat_input("Ask about any Codeforces problem…", key="chat_input"):
+chat_placeholder = "Ask about any Codeforces problem…" if active_ok else "Please enter your API key in the sidebar to chat."
+if user_input := st.chat_input(chat_placeholder, key="chat_input", disabled=not active_ok):
     st.session_state["messages"].append({"role": "user", "content": user_input})
     with st.chat_message("user", avatar="🧑‍💻"):
         st.markdown(user_input)
@@ -405,7 +417,7 @@ if user_input := st.chat_input("Ask about any Codeforces problem…", key="chat_
     with st.chat_message("assistant", avatar="⚡"):
         with st.spinner("Thinking…"):
             try:
-                agent = st.session_state["agent"]
+                agent = get_agent(provider, user_api_key) # guarantee fresh instance based on key
                 history = [m for m in st.session_state["messages"][:-1] if m["role"] in ("user", "assistant")]
                 response = agent.chat(augmented, history=history)
             except Exception as e:
