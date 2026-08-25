@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+# .env.example is committed (no real secrets in it)
+
+# Large data files (rebuilt on first run)
+data/cf_problems.db
+data/*.db
+
+# Vector / sparse indices (rebuilt on first run)
+retrieval/chroma_db/
+retrieval/bm25_index.pkl
+
+# Eval results
+eval/results/
+
+# Agent logs
+logs/
+
+# HuggingFace model cache
+*.safetensors
+*.bin
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

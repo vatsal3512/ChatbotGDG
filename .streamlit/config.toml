@@ -1,0 +1,6 @@
+# Streamlit Community Cloud entry point
+[server]
+headless = true
+port = 8501
+enableCORS = false
+enableXsrfProtection = false

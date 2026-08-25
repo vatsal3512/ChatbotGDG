@@ -1,0 +1,242 @@
+[
+  {
+    "retrieval_query": "Cube bitmasks",
+    "expected_problem_ids": [
+      "2041C"
+    ],
+    "generation_query": "I'm stuck on problem Cube (ID: 2041C). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Cube', suggest an approach related to 'bitmasks', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Grid Covering chinese remainder theorem",
+    "expected_problem_ids": [
+      "2217C"
+    ],
+    "generation_query": "I'm stuck on problem Grid Covering (ID: 2217C). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Grid Covering', suggest an approach related to 'chinese remainder theorem', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Zero Sum constructive algorithms",
+    "expected_problem_ids": [
+      "2247A"
+    ],
+    "generation_query": "I'm stuck on problem Zero Sum (ID: 2247A). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Zero Sum', suggest an approach related to 'constructive algorithms', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Iris's Full Binary Tree brute force",
+    "expected_problem_ids": [
+      "2006E"
+    ],
+    "generation_query": "I'm stuck on problem Iris's Full Binary Tree (ID: 2006E). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Iris's Full Binary Tree', suggest an approach related to 'brute force', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Beautiful Problem dp",
+    "expected_problem_ids": [
+      "2162H"
+    ],
+    "generation_query": "I'm stuck on problem Beautiful Problem (ID: 2162H). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Beautiful Problem', suggest an approach related to 'dp', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Kindergarten Homework implementation",
+    "expected_problem_ids": [
+      "2172K"
+    ],
+    "generation_query": "I'm stuck on problem Kindergarten Homework (ID: 2172K). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Kindergarten Homework', suggest an approach related to 'implementation', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Ashmal greedy",
+    "expected_problem_ids": [
+      "2180B"
+    ],
+    "generation_query": "I'm stuck on problem Ashmal (ID: 2180B). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Ashmal', suggest an approach related to 'greedy', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Compare Suffixes interactive",
+    "expected_problem_ids": [
+      "2206A"
+    ],
+    "generation_query": "I'm stuck on problem Compare Suffixes (ID: 2206A). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Compare Suffixes', suggest an approach related to 'interactive', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Sakurako's Box combinatorics",
+    "expected_problem_ids": [
+      "2008F"
+    ],
+    "generation_query": "I'm stuck on problem Sakurako's Box (ID: 2008F). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Sakurako's Box', suggest an approach related to 'combinatorics', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Blocked greedy",
+    "expected_problem_ids": [
+      "2220A"
+    ],
+    "generation_query": "I'm stuck on problem Blocked (ID: 2220A). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Blocked', suggest an approach related to 'greedy', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Genokraken constructive algorithms",
+    "expected_problem_ids": [
+      "2032D"
+    ],
+    "generation_query": "I'm stuck on problem Genokraken (ID: 2032D). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Genokraken', suggest an approach related to 'constructive algorithms', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Dora's Set greedy",
+    "expected_problem_ids": [
+      "2007A"
+    ],
+    "generation_query": "I'm stuck on problem Dora's Set (ID: 2007A). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Dora's Set', suggest an approach related to 'greedy', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Yet Another Permutation Constructive *special",
+    "expected_problem_ids": [
+      "1958E"
+    ],
+    "generation_query": "I'm stuck on problem Yet Another Permutation Constructive (ID: 1958E). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Yet Another Permutation Constructive', suggest an approach related to '*special', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Porto Vs. Benfica data structures",
+    "expected_problem_ids": [
+      "2068E"
+    ],
+    "generation_query": "I'm stuck on problem Porto Vs. Benfica (ID: 2068E). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Porto Vs. Benfica', suggest an approach related to 'data structures', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Stop Spot implementation",
+    "expected_problem_ids": [
+      "2226G"
+    ],
+    "generation_query": "I'm stuck on problem Stop Spot (ID: 2226G). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Stop Spot', suggest an approach related to 'implementation', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Affectionate Arrays (Easy Version) data structures",
+    "expected_problem_ids": [
+      "2053I1"
+    ],
+    "generation_query": "I'm stuck on problem Affectionate Arrays (Easy Version) (ID: 2053I1). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Affectionate Arrays (Easy Version)', suggest an approach related to 'data structures', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Make It Beautiful bitmasks",
+    "expected_problem_ids": [
+      "2118C"
+    ],
+    "generation_query": "I'm stuck on problem Make It Beautiful (ID: 2118C). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Make It Beautiful', suggest an approach related to 'bitmasks', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Delete and Concatenate greedy",
+    "expected_problem_ids": [
+      "2245B"
+    ],
+    "generation_query": "I'm stuck on problem Delete and Concatenate (ID: 2245B). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Delete and Concatenate', suggest an approach related to 'greedy', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Tom and Jerry dfs and similar",
+    "expected_problem_ids": [
+      "2245E"
+    ],
+    "generation_query": "I'm stuck on problem Tom and Jerry (ID: 2245E). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Tom and Jerry', suggest an approach related to 'dfs and similar', and NOT give full code."
+  },
+  {
+    "retrieval_query": "A Number Between Two Others greedy",
+    "expected_problem_ids": [
+      "2225A"
+    ],
+    "generation_query": "I'm stuck on problem A Number Between Two Others (ID: 2225A). Give me a nudge.",
+    "rubric": "The response should mention the problem 'A Number Between Two Others', suggest an approach related to 'greedy', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Battle of Arrays data structures",
+    "expected_problem_ids": [
+      "2181B"
+    ],
+    "generation_query": "I'm stuck on problem Battle of Arrays (ID: 2181B). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Battle of Arrays', suggest an approach related to 'data structures', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Omega Numbers bitmasks",
+    "expected_problem_ids": [
+      "2176F"
+    ],
+    "generation_query": "I'm stuck on problem Omega Numbers (ID: 2176F). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Omega Numbers', suggest an approach related to 'bitmasks', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Wish Upon a Satellite (Easy Version) dp",
+    "expected_problem_ids": [
+      "2084G1"
+    ],
+    "generation_query": "I'm stuck on problem Wish Upon a Satellite (Easy Version) (ID: 2084G1). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Wish Upon a Satellite (Easy Version)', suggest an approach related to 'dp', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Preparing for the Exam constructive algorithms",
+    "expected_problem_ids": [
+      "2051C"
+    ],
+    "generation_query": "I'm stuck on problem Preparing for the Exam (ID: 2051C). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Preparing for the Exam', suggest an approach related to 'constructive algorithms', and NOT give full code."
+  },
+  {
+    "retrieval_query": "diss_quack and Array Game bitmasks",
+    "expected_problem_ids": [
+      "2246D"
+    ],
+    "generation_query": "I'm stuck on problem diss_quack and Array Game (ID: 2246D). Give me a nudge.",
+    "rubric": "The response should mention the problem 'diss_quack and Array Game', suggest an approach related to 'bitmasks', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Game With Triangles binary search",
+    "expected_problem_ids": [
+      "2063D"
+    ],
+    "generation_query": "I'm stuck on problem Game With Triangles (ID: 2063D). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Game With Triangles', suggest an approach related to 'binary search', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Shifted MEX implementation",
+    "expected_problem_ids": [
+      "2185C"
+    ],
+    "generation_query": "I'm stuck on problem Shifted MEX (ID: 2185C). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Shifted MEX', suggest an approach related to 'implementation', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Find Minimum Operations bitmasks",
+    "expected_problem_ids": [
+      "2020A"
+    ],
+    "generation_query": "I'm stuck on problem Find Minimum Operations (ID: 2020A). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Find Minimum Operations', suggest an approach related to 'bitmasks', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Royal Flush dp",
+    "expected_problem_ids": [
+      "2038M"
+    ],
+    "generation_query": "I'm stuck on problem Royal Flush (ID: 2038M). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Royal Flush', suggest an approach related to 'dp', and NOT give full code."
+  },
+  {
+    "retrieval_query": "Binomial Coefficients, Kind Of combinatorics",
+    "expected_problem_ids": [
+      "2025B"
+    ],
+    "generation_query": "I'm stuck on problem Binomial Coefficients, Kind Of (ID: 2025B). Give me a nudge.",
+    "rubric": "The response should mention the problem 'Binomial Coefficients, Kind Of', suggest an approach related to 'combinatorics', and NOT give full code."
+  }
+]

@@ -1,0 +1,38 @@
+# ── Core ───────────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+requests>=2.31.0
+SQLAlchemy>=2.0.0
+
+# ── LLM Providers ─────────────────────────────────────────────────────────────
+groq>=0.9.0
+google-genai>=1.0.0
+
+# ── Embeddings & Reranker (CPU-only build) ────────────────────────────────────
+sentence-transformers>=3.0.0
+torch
+torchvision
+
+# ── Vector Store ──────────────────────────────────────────────────────────────
+chromadb>=0.5.0
+pysqlite3-binary>=0.5.0; sys_platform == "linux"  # required for Streamlit Cloud (SQLite version patch)
+
+# ── Sparse Retrieval ──────────────────────────────────────────────────────────
+rank-bm25>=0.2.2
+
+# ── Sandbox ───────────────────────────────────────────────────────────────────
+# subprocess is stdlib; nothing extra needed
+
+# ── UI ────────────────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+
+# ── Scraper (optional — gracefully skipped if geckodriver not available) ───────
+selenium>=4.20.0
+webdriver-manager>=4.0.0
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest>=8.0.0
+pytest-mock>=3.12.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+tqdm>=4.66.0
+numpy>=1.26.0
