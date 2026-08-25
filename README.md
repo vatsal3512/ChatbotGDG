@@ -92,33 +92,9 @@ python -m data.ingest_codeforces
 python -m retrieval.embed
 ```
 
-### 5. Launch the UI
-Start the Streamlit application:
-```bash
-python -m streamlit run app.py
-```
-Open your browser to `http://localhost:8501`.
+### 5.  Streamlit Application 
+https://cf-soln-chatbot.streamlit.app/
 
----
-
-## ☁️ Deploying to Streamlit Community Cloud
-
-This project is fully configured for deployment on Streamlit Community Cloud.
-
-1. **Push your code to GitHub.**
-2. Go to [share.streamlit.io](https://share.streamlit.io/) and click **"New app"**.
-3. Select this repository and `app.py` as the main file path.
-4. Click **Advanced Settings** and add your secrets:
-   ```toml
-   LLM_PROVIDER="gemini"
-   GEMINI_API_KEY="your-gemini-key-here"
-   GEMINI_MODEL="gemini-3.6-flash"
-   ```
-5. Click **Deploy**.
-
-> **Note:** The `cloud_bootstrap.py` script will automatically run on the first boot in the cloud. It downloads the problem dataset and builds the vector indices dynamically since they are too large to store in Git.
-
----
 
 ## 🧪 Running the Evaluation Harness
 
